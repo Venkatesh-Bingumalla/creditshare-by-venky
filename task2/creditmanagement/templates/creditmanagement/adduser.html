@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!-- Animation cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- <div class="jumbotron bg-info" style="margin-bottom:0px;"> -->
+    <!-- <h1>Students Communal System</h1> -->
+    <!-- <p>share and gain knowledge</p> -->
+
+    <!-- </div> -->
+    <nav class="navbar navbar-expand-md navbar-light text-warning bg-dark " style="background-image:   linear-gradient( 87.9deg,rgba(0,123,255,.25) 45.5%, #17a2b8 92.5% );">
+        <!--<a class="navbar-brand" href="#">Students Communal System</a>-->
+
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+		<span class="navbar-toggler-icon"></span>
+		
+	</button>
+
+        <!-- #00ccb0 -->
+        <a href="../" class="navbar-text " style="color:rgb(0 220 225);"><i class="fas fa-home"> &nbsp <strong>Credit Share</strong></i></a>
+        <div class="collapse navbar-collapse" id="collapse_target" float=right>
+            <!-- <a class="navbar-brand"><img width=20px height=20px src="C:\Users\sdc\Downloads\WhatsApp Image 2020-05-12 at 16.54.39.jpeg"></a>		 -->
+
+            <ul class="navbar-nav " style="margin-left:auto; ">
+
+                <li class="nav-item" style=" color:aliceblue; margin-right:5px;">
+                    <a class="navlink" style=" color:aliceblue;" href="../aboutus">About Us</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    {%if f%}
+    <div id="back"></div>
+    <div id="front"></div>
+    <div class="animate__animated animate__zoomInDown alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <p style="text-align:center;"> {% for mess in messages%} ({{mess}}) {%endfor%}</p>
+    </div>
+
+    {%endif%}
+    <div class="card animate__animated animate__fadeInBottomLeft justify-content-center shadow" style="width:90%;margin:2px auto;">
+        <div class="card-header">
+            <section class="justify-content-center animate__animated animate__zoomInDown" style="font-size:450%;text-align:center;"><i class="fa fa-user-circle"></i></section>
+            <section class="justify-content-center animate__animated animate__zoomInUp" style="font-size:150%;text-align:center;">
+                <p>Register User here with minimum credits</p>
+            </section>
+        </div>
+        <div class="card-body">
+
+            <form method="POST" action="../adduser/">
+                {% csrf_token %}
+                <div style="text-align: center;">
+
+                    <input type="text" name="Name" style="width:80%;" class="mb-2 border border-dark" placeholder="Enter Name "></input><br>
+                    <input type="email" name="email" style="width:80%;" class="mb-2 border border-dark" placeholder="Enter Email "></input><br>
+                    <input type="text" name="credit" style="width:80%;" class="mb-2 border border-dark" placeholder="Enter credit range(0-50)"></input><br>
+                    <div style="text-align:center"><button class="btn-success">Submit</button></div>
+
+                </div>
+            </form>
+
+        </div>
+        <div style="text-align:center;">
+            <a href="../" class="btn btn-success">back</a>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

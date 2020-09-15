@@ -1,0 +1,171 @@
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <!-- Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!-- Animation cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style> -->
+</head>
+
+<body>
+
+    <!-- </div> -->
+    <nav class="navbar navbar-expand-md navbar-light text-warning bg-dark " style="background-image:   linear-gradient( 87.9deg,rgba(0,123,255,.25) 45.5%, #17a2b8 92.5% );">
+
+
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+		<span class="navbar-toggler-icon"></span>
+		
+	</button>
+
+        <!-- #00ccb0 -->
+        <a href="../" class="navbar-text " style="color:rgb(0 220 225);"><i class="fas fa-home"> &nbsp <strong>Credit Share</strong></i></a>
+        <div class="collapse navbar-collapse" id="collapse_target" float=right>
+            <!-- <a class="navbar-brand"><img width=20px height=20px src="C:\Users\sdc\Downloads\WhatsApp Image 2020-05-12 at 16.54.39.jpeg"></a>		 -->
+
+            <ul class="navbar-nav " style="margin-left:auto; ">
+
+                <li class="nav-item" style=" color:aliceblue; margin-right:5px;">
+                    <a class="navlink" style=" color:aliceblue;" href="../aboutus">About Us</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div id="back"></div>
+    <div id="front"></div>
+
+
+    <div class="card animate__animated animate__fadeInBottomLeft justify-content-center shadow bg-info" style="width:80%;margin:2 auto;">
+        <div class="card-header">
+            <section class="justify-content-center animate__animated animate__zoomInDown" style="font-size:450%;text-align:center;"><i class="fa fa-users"></i></section>
+            <section class="justify-content-center" style="font-size:150%;text-align:center;">
+                <p>Credit Share Users</p>
+            </section>
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive-sm" style="overflow-x:auto;">
+                <table class="table table-dark table-striped table-hover" width="90%">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>View</th>
+
+                    </tr>
+                    {%if users%} {%for u in users%}
+                    <tr>
+                        <td>{{u.id}}</td>
+
+                        <td>{{u.Name}}</td>
+
+                        <td>
+                            <button type="button" class="btn btn-dark clickThis" data-toggle="modal" data-target="#myModal" data-id={{u.id}} data-name={{u.Name}} data-email={{u.email}} data-credit={{u.credit}}>view</button>
+                        </td>
+
+                    </tr>
+                    {%endfor%} {%endif%}
+
+                </table>
+            </div>
+        </div>
+
+
+
+        <div style="text-align:center;">
+            <a href="../adduser" class="btn btn-success justify-content-center">Add New User <i class="fa fa-user-plus"></i></a>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">User Details</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="row ml-2">
+                        ID is &nbsp;
+                        <p id="id"></p>
+                    </div>
+                    <div class="row ml-2">
+                        Name is &nbsp;
+                        <p id="Name"></p>
+                    </div>
+
+                    <div class="row ml-2">
+                        Email is &nbsp;
+                        <p id="email"></p>
+                    </div>
+
+                    <div class="row ml-2">
+                        Credits are &nbsp;
+                        <strong><p id="credit"></p></strong>
+                    </div>
+
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).on("click", ".clickThis", function(e) {
+            var roomNumber = $(this).data('id');
+            var roomNumber1 = $(this).data('name');
+            var roomNumber2 = $(this).data('email');
+            var roomNumber3 = $(this).data('credit');
+            console.log(roomNumber, 'roomNumber')
+            console.log(roomNumber1, 'roomNumber1');
+            console.log(roomNumber2, 'roomNumber2');
+            console.log(roomNumber3, 'roomNumber3');
+            $(".modal-body #id").text(roomNumber);
+            $(".modal-body #name").text(roomNumber1);
+            $(".modal-body #email").text(roomNumber2);
+            $(".modal-body #credit").text(roomNumber3);
+        });
+    </script>
+
+
+    <!-- jQuery, Popper and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js " integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js " integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k " crossorigin="anonymous "></script>
+</body>
+
+</html>

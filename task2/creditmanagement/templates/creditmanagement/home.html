@@ -1,0 +1,281 @@
+{% load static %}
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!-- Animation cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .ts {
+            text-shadow: 2px 2px #ff0000;
+        }
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            background-color: #05182d;
+        }
+        
+        @-webkit-keyframes backgroundAnimate {
+            from {
+                left: 0;
+                top: 0;
+            }
+            to {
+                left: -10000px;
+                top: -2000px;
+            }
+        }
+        
+        @-moz-keyframes backgroundAnimate {
+            from {
+                left: 0;
+                top: 0;
+            }
+            to {
+                left: -10000px;
+                top: -2000px;
+            }
+        }
+        
+        @-o-keyframes backgroundAnimate {
+            from {
+                left: 0;
+                top: 0;
+            }
+            to {
+                left: -10000px;
+                top: -2000px;
+            }
+        }
+        
+        @keyframes backgroundAnimate {
+            from {
+                left: 0;
+                top: 0;
+            }
+            to {
+                left: -10000px;
+                top: -2000px;
+            }
+        }
+        
+        #back {
+            background: url(http://www.tranexnet.com/img/back.png) repeat 20% 20%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.4;
+            z-index: -1;
+            -webkit-animation-name: backgroundAnimate;
+            -webkit-animation-duration: 500s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-name: backgroundAnimate;
+            -moz-animation-duration: 5s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: infinite;
+            -o-animation-name: backgroundAnimate;
+            -o-animation-duration: 500s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: infinite;
+            animation-name: backgroundAnimate;
+            animation-duration: 500s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        
+        #front {
+            background: url(http://www.tranexnet.com/img/front.png) repeat 35% 35%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.6;
+            z-index: -1;
+            -webkit-animation-name: backgroundAnimate;
+            -webkit-animation-duration: 300s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-name: backgroundAnimate;
+            -moz-animation-duration: 300s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: infinite;
+            -o-animation-name: backgroundAnimate;
+            -o-animation-duration: 300s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: infinite;
+            animation-name: backgroundAnimate;
+            animation-duration: 300s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="jumbotron bg-info" style="margin-bottom:0px;"> -->
+    <!-- <h1>Students Communal System</h1> -->
+    <!-- <p>share and gain knowledge</p> -->
+
+    <!-- </div> -->
+    <nav class="navbar navbar-expand-md navbar-light text-warning bg-dark " style="background-image:   linear-gradient( 87.9deg,rgba(0,123,255,.25) 45.5%, #17a2b8 92.5% );">
+        <!--<a class="navbar-brand" href="#">Students Communal System</a>-->
+
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+		<span class="navbar-toggler-icon"></span>
+		
+	</button>
+
+        <!-- #00ccb0 -->
+        <a href="#" class="navbar-text " style="color:rgb(0 220 225);"><i class="fas fa-home"> &nbsp <strong>Credit Share</strong></i></a>
+        <div class="collapse navbar-collapse" id="collapse_target" float=right>
+            <!-- <a class="navbar-brand"><img width=20px height=20px src="C:\Users\sdc\Downloads\WhatsApp Image 2020-05-12 at 16.54.39.jpeg"></a>		 -->
+
+            <ul class="navbar-nav " style="margin-left:auto; ">
+
+                <li class="nav-item" style=" color:aliceblue; margin-right:5px;">
+                    <a class="navlink" style=" color:aliceblue;" href="/aboutus">About Us</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div id="back"></div>
+    <div id="front"></div>
+    <section style="text-align:center">
+        <h2 class="animate__animated animate__fadeInRight" style="color:azure; font-family: Helvetica Neue;">
+            <italic>Credit Share</italic>
+        </h2>
+        <h4 class="animate__animated animate__fadeInLeft" style="color: cadetblue; font-family: Helvetica Neue;"><i class="fa fa-star "></i>--It's not Real Money--<i class="fa fa-star "></i></h4>
+
+
+    </section>
+    <div class="row animate__animated animate__fadeInUp justify-content-center " style="margin:2px 2px 2px 2px;">
+        <div class="col-lg-4 col-12">
+            <div class="card bg-light border border-primary mb-20" style="margin-bottom:22px;">
+                <div class="card-header">
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+
+                        <!-- Indicators -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#demo" data-slide-to="0" class="active"></li>
+                            <li data-target="#demo" data-slide-to="1"></li>
+
+                        </ul>
+
+                        <!-- The slideshow -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{% static 'imgs/user2.jpeg'%}" width="100%" height="300px" class="image-responsive" alt="project1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'imgs/user1.jpeg'%}" width="100%" height="300px" class="image-responsive" alt="project2">
+                            </div>
+
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">View Users</h4>
+                    <p class="card-text">Here we can view all users and can also add new users</p>
+
+                </div>
+                <div class="card-footer">
+                    <a href="viewuser" class="btn btn-info btn-sm" style="margin:auto;">Visit</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-12">
+            <div class="card bg-light border border-primary mb-20" style="margin-bottom:22px;">
+                <div class="card-header">
+                    <div id="demo1" class="carousel slide" data-ride="carousel">
+
+                        <!-- Indicators -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#demo1" data-slide-to="0" class="active"></li>
+                            <li data-target="#demo1" data-slide-to="1"></li>
+
+                        </ul>
+
+                        <!-- The slideshow -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{% static 'imgs/tm1.jpeg'%}" width="100%" height="300px" class="image-responsive" alt="project1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'imgs/Tm2.jpeg'%}" width="100%" height="300px" class="image-responsive" alt="project2">
+                            </div>
+
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo1" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Transfer Credit</h4>
+                    <p class="card-text">Here we can transfer credit from one user to other users</p>
+
+                </div>
+                <div class="card-footer">
+                    <a href="transfer" class="btn btn-info btn-sm" style="margin:auto;">Visit</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    <!-- Footer -->
+
+    <footer class="page-footer font-small blue" style="background-image: linear-gradient(to top, rgb(0 102 255 / 50%) 0%, #3308674a 100%);">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://portfolio-venky-bingumalla.herokuapp.com/"> Venkatesh Bingumalla.com</a> &
+            <a href="https://thesparksfoundationsingapore.org/"> Sparks.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
